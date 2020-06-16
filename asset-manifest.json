@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/villager-moveout-calculator/static/css/main.7ed7244a.chunk.css",
-    "main.js": "/villager-moveout-calculator/static/js/main.b71b4f8e.chunk.js",
-    "main.js.map": "/villager-moveout-calculator/static/js/main.b71b4f8e.chunk.js.map",
+    "main.js": "/villager-moveout-calculator/static/js/main.25fce7ec.chunk.js",
+    "main.js.map": "/villager-moveout-calculator/static/js/main.25fce7ec.chunk.js.map",
     "runtime-main.js": "/villager-moveout-calculator/static/js/runtime-main.83923304.js",
     "runtime-main.js.map": "/villager-moveout-calculator/static/js/runtime-main.83923304.js.map",
-    "static/js/2.72c981d3.chunk.js": "/villager-moveout-calculator/static/js/2.72c981d3.chunk.js",
-    "static/js/2.72c981d3.chunk.js.map": "/villager-moveout-calculator/static/js/2.72c981d3.chunk.js.map",
+    "static/js/2.11c853c4.chunk.js": "/villager-moveout-calculator/static/js/2.11c853c4.chunk.js",
+    "static/js/2.11c853c4.chunk.js.map": "/villager-moveout-calculator/static/js/2.11c853c4.chunk.js.map",
     "index.html": "/villager-moveout-calculator/index.html",
-    "precache-manifest.fa06e1d537a39957b9ece041046e22eb.js": "/villager-moveout-calculator/precache-manifest.fa06e1d537a39957b9ece041046e22eb.js",
+    "precache-manifest.a39d8c5ea3ef93b7ba7f8f516ae1ffe0.js": "/villager-moveout-calculator/precache-manifest.a39d8c5ea3ef93b7ba7f8f516ae1ffe0.js",
     "service-worker.js": "/villager-moveout-calculator/service-worker.js",
     "static/css/main.7ed7244a.chunk.css.map": "/villager-moveout-calculator/static/css/main.7ed7244a.chunk.css.map",
-    "static/js/2.72c981d3.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.72c981d3.chunk.js.LICENSE.txt"
+    "static/js/2.11c853c4.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.11c853c4.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.83923304.js",
-    "static/js/2.72c981d3.chunk.js",
+    "static/js/2.11c853c4.chunk.js",
     "static/css/main.7ed7244a.chunk.css",
-    "static/js/main.b71b4f8e.chunk.js"
+    "static/js/main.25fce7ec.chunk.js"
   ]
 }
