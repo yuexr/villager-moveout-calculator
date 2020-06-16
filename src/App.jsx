@@ -3,6 +3,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 import './App.scss';
 import lily from './img/lily.png';
+import { ResidentsContext } from './context/Residents'
+import { VillagersContext } from './context/Villagers'
+import ResidentsContainer from './components/ResidentsContainer/ResidentsContainer';
+import VillagersInputContainer from './components/VillagersInputContainer/VillagersInputContainer';
 
 const App = () => {
   const [residents, setResidents] = useState([{
@@ -10,44 +14,57 @@ const App = () => {
     name: "Resident 1"
   }]);
 
-  const addNewResident = () => {
-    setResidents([...residents, {
+  const [villagers, setVillagers] = useState([
+    {
       id: uuidv4(),
-      name: `Resident ${residents.length + 1}`
-    }]);
-  }
-
-  const renameResident = (index, newName) => {
-    setResidents([...residents.slice(0, index), { ...residents[index], name: newName }, ...residents.slice(index + 1)]);
-  }
-
-  const removeResident = (index) => {
-    setResidents([...residents.slice(0, index), ...residents.slice(index + 1)]);
-  }
+      name: "Villager 1",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+    {
+      id: uuidv4(),
+      name: "Villager 2",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+    {
+      id: uuidv4(),
+      name: "Villager 3",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+    {
+      id: uuidv4(),
+      name: "Villager 4",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+    {
+      id: uuidv4(),
+      name: "Villager 5",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+    {
+      id: uuidv4(),
+      name: "Villager 6",
+      friendshipLevels: [1],
+      manualExclude: false
+    },
+  ])
 
   return (
-    <div className="App">
-      <h1>coming soon binch</h1>
-      <img src={lily} alt="Lily"></img>
-      <div className="ResidentsContainer">
-        {
-          residents.map((resident, i) => (
-            <div key={resident.id}>
-              {`Resident ${i + 1} `}
-              <input type="text" value={resident.name} onChange={(e) => renameResident(i, e.target.value)}/>
-              { residents.length > 1 && (
-                <button onClick={() => removeResident(i)}>REMOVE</button>
-              )}
-            </div>
-          ))
-        }
-        { residents.length < 8 && (
-          <button onClick={addNewResident}>+ ADD MORE</button>
-        )}
-      </div>
-      <div className="VillagersInputContainer"></div>
-      <div className="VillagersFriendshipContainer"></div>
-    </div>
+    <ResidentsContext.Provider value={{ residents, setResidents }}>
+      <VillagersContext.Provider value={{ villagers, setVillagers }}>
+        <div className="App">
+          <h1>coming soon binch</h1>
+          <img src={lily} alt="Lily"></img>
+          <ResidentsContainer />
+          <VillagersInputContainer />
+          <div className="VillagersFriendshipContainer"></div>
+        </div>
+      </VillagersContext.Provider>
+    </ResidentsContext.Provider>
   );
 }
 
