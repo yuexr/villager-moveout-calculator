@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ResidentField = ({ name, index, onChange }) => (
+const ResidentNameField = ({ name, index, onChange }) => (
   <div>
     {`Resident ${index + 1} `}
     <input
@@ -11,4 +11,4 @@ const ResidentField = ({ name, index, onChange }) => (
   </div>
 );
 
-export default ResidentField;
+export default ResidentNameField;

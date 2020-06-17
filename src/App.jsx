@@ -7,6 +7,7 @@ import { ResidentsContext } from './context/Residents'
 import { VillagersContext } from './context/Villagers'
 import ResidentsContainer from './components/ResidentsContainer/ResidentsContainer';
 import VillagersInputContainer from './components/VillagersInputContainer/VillagersInputContainer';
+import VillagersChanceContainer from './components/VillagersChanceContainer/VillagersChanceContainer';
 
 const App = () => {
   const [residents, setResidents] = useState([{
@@ -61,7 +62,7 @@ const App = () => {
           <img src={lily} alt="Lily"></img>
           <ResidentsContainer />
           <VillagersInputContainer />
-          <div className="VillagersFriendshipContainer"></div>
+          <VillagersChanceContainer />
         </div>
       </VillagersContext.Provider>
     </ResidentsContext.Provider>

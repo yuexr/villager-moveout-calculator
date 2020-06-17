@@ -2,10 +2,12 @@ import React, { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 import { VillagersContext } from "../../context/Villagers";
+import { ResidentsContext } from "../../context/Residents";
 import VillagerNameField from "../VillagerNameField/VillagerNameField";
 
 const VillagersInputContainer = () => {
   const { villagers, setVillagers } = useContext(VillagersContext);
+  const { residents } = useContext(ResidentsContext);
 
   const addNewVillager = () => {
     setVillagers([
@@ -13,7 +15,7 @@ const VillagersInputContainer = () => {
       {
         id: uuidv4(),
         name: `Villager ${villagers.length + 1}`,
-        friendshipLevels: [1],
+        friendshipLevels: residents.map(() => 1),
         manualExclude: false
       },
     ]);
