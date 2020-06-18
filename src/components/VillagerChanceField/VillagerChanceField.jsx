@@ -4,7 +4,7 @@ import { ResidentsContext } from "../../context/Residents";
 import { VillagersContext } from "../../context/Villagers";
 import ResidentFriendshipField from "../ResidentFriendshipField/ResidentFriendshipField";
 
-const VillagerChanceField = ({ villager, villagerIndex }) => {
+const VillagerChanceField = ({ villager, villagerIndex, moveOutChanceA, moveOutChanceB }) => {
   const { residents } = useContext(ResidentsContext);
   const { villagers, setVillagers } = useContext(VillagersContext);
 
@@ -47,7 +47,7 @@ const VillagerChanceField = ({ villager, villagerIndex }) => {
         <input type="checkbox" checked={villager.manualExclude} onChange={(e) => updateExcludeVillager(villagerIndex, e.target.checked)} />
       </div>
       <div>
-        Ask Chance %: {0}
+        {`Ask Chance %: ${Math.min(moveOutChanceA, moveOutChanceB)}% - ${Math.max(moveOutChanceA, moveOutChanceB)}%`}
       </div>
     </div>
   );

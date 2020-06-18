@@ -5,6 +5,12 @@ const ResidentFriendshipField = ({ residentName, friendshipLevel, onChange }) =>
     {residentName}
     <form>
       <label>
+        <input type="radio" value="0"
+          checked={friendshipLevel === 0}
+          onChange={onChange} />
+        unknown
+      </label>
+      <label>
         <input type="radio" value="1"
           checked={friendshipLevel === 1}
           onChange={onChange} />

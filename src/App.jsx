@@ -19,37 +19,37 @@ const App = () => {
     {
       id: uuidv4(),
       name: "Villager 1",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
     {
       id: uuidv4(),
       name: "Villager 2",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
     {
       id: uuidv4(),
       name: "Villager 3",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
     {
       id: uuidv4(),
       name: "Villager 4",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
     {
       id: uuidv4(),
       name: "Villager 5",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
     {
       id: uuidv4(),
       name: "Villager 6",
-      friendshipLevels: [1],
+      friendshipLevels: [0],
       manualExclude: false
     },
   ])
