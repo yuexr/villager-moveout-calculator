@@ -15,7 +15,7 @@ const VillagersInputContainer = () => {
       {
         id: uuidv4(),
         name: `Villager ${villagers.length + 1}`,
-        friendshipLevels: residents.map(() => 1),
+        friendshipLevels: residents.map(() => 0),
         manualExclude: false
       },
     ]);

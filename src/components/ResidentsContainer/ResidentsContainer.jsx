@@ -20,7 +20,7 @@ const ResidentsContainer = () => {
     // track another friendship level for each villager
     setVillagers(villagers.map(villager => ({
       ...villager,
-      friendshipLevels: [...villager.friendshipLevels, 1]
+      friendshipLevels: [...villager.friendshipLevels, 0]
     })));
   };
 
