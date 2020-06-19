@@ -51,7 +51,7 @@ const ResidentsContainer = () => {
         <button onClick={addNewResident}>+ ADD MORE</button>
       )}
       {residents.length > 1 && (
-        <button onClick={removeLastResident}>REMOVE</button>
+        <button onClick={removeLastResident}>- REMOVE</button>
       )}
     </div>
   );

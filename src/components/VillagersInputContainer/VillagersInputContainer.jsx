@@ -15,8 +15,7 @@ const VillagersInputContainer = () => {
       {
         id: uuidv4(),
         name: `Villager ${villagers.length + 1}`,
-        friendshipLevels: residents.map(() => 0),
-        manualExclude: false
+        friendshipLevels: residents.map(() => 0)
       },
     ]);
   };
@@ -42,7 +41,7 @@ const VillagersInputContainer = () => {
         <button onClick={addNewVillager}>+ ADD MORE</button>
       )}
       {villagers.length > 6 && (
-        <button onClick={removeLastVillager}>REMOVE</button>
+        <button onClick={removeLastVillager}>- REMOVE</button>
       )}
     </div>
   );
