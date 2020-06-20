@@ -1,11 +1,29 @@
 import React from 'react';
+import { Slider } from '@material-ui/core';
+import Icon from '@mdi/react';
+import { mdiHeart } from '@mdi/js';
 
-const ResidentFriendshipField = ({ residentName, friendshipLevel, onChange }) => (
-  <div className="ResidentFriendshipField">
-    <div>{residentName}</div>
-    <div>LEVEL: {friendshipLevel || "?"}</div>
-    <input type="range" min="0" max="6" value={friendshipLevel} onChange={onChange} />
-  </div>
-);
+import './ResidentFriendshipField.scss';
+
+const ResidentFriendshipField = ({ residentName, friendshipLevel, onChange }) => {
+  const getThumbComponent = (props) => (
+    <span {...props}>
+      <Icon path={mdiHeart} size="24px" />
+    </span>
+  )
+
+  return (
+    <div className="ResidentFriendshipField">
+      <div className="ResidentFriendshipField__header">
+        <span className="ResidentFriendshipField__name">{residentName}</span>
+        <span>LEVEL: {friendshipLevel || "?"}</span>
+      </div>
+      <div className="ResidentFriendshipField__slider">
+        <Slider min={0} max={6} value={friendshipLevel} onChange={onChange}
+          ThumbComponent={getThumbComponent} />
+      </div>
+    </div>
+  );
+}
 
 export default ResidentFriendshipField;

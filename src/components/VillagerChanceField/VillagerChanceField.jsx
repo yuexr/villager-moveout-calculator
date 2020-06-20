@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 
+import './VillagerChanceField.scss';
 import { ResidentsContext } from "../../context/Residents";
 import { VillagersContext } from "../../context/Villagers";
 import ResidentFriendshipField from "../ResidentFriendshipField/ResidentFriendshipField";
 import { ExclusionsContext } from '../../context/Exclusions';
-import { isVillagerExcluded } from '../../utils/moveOutChances';
+import { getVillagerExcludedReason } from '../../utils/moveOutChances';
 
 const VillagerChanceField = ({ villager, villagerIndex, moveOutChanceA, moveOutChanceB }) => {
   const { residents } = useContext(ResidentsContext);
@@ -20,28 +21,33 @@ const VillagerChanceField = ({ villager, villagerIndex, moveOutChanceA, moveOutC
       ...villagers.slice(villagerIndex + 1)]);
   }
 
-  const isExcluded = isVillagerExcluded(villagerIndex, exclusions)
+  const villagerExcludedReason = getVillagerExcludedReason(villagerIndex, exclusions);
 
   return (
-    <div className="VillagerChanceField">
-      <h3>{villager.name}</h3>
-      {isExcluded ? <p>Cannot ask to move</p> :
-        <>
-          <h4>Friendship with residents:</h4>
-          {villager.friendshipLevels.map((friendshipLevel, friendshipLevelIndex) => {
-            const relatedResident = residents[friendshipLevelIndex];
-            return (
-              <ResidentFriendshipField
-                key={relatedResident.id}
-                residentName={relatedResident.name}
-                friendshipLevel={friendshipLevel}
-                onChange={(e) => updateFriendshipLevel(villagerIndex, friendshipLevelIndex, parseInt(e.target.value))}/>
-            )
-          })}
-        </>
-      }
+    <div className={`VillagerChanceField ${villagerExcludedReason ? 'disabled' : ''}`}>
       <div>
-        {`Ask Chance: ${isExcluded ? '0%' : Math.min(moveOutChanceA, moveOutChanceB) + ' % - ' + Math.max(moveOutChanceA, moveOutChanceB) + '%'}`}
+        <div className="VillagerChanceField__name">{villager.name}</div>
+        {villagerExcludedReason ?
+          <div className="VillagerChanceField__disabled-text">Cannot ask to move because: {villagerExcludedReason}</div> :
+          <>
+            {villager.friendshipLevels.map((friendshipLevel, friendshipLevelIndex) => {
+              const relatedResident = residents[friendshipLevelIndex];
+              return (
+                <ResidentFriendshipField
+                  key={relatedResident.id}
+                  residentName={relatedResident.name}
+                  friendshipLevel={friendshipLevel}
+                  onChange={(_, value) => updateFriendshipLevel(villagerIndex, friendshipLevelIndex, value)}/>
+              )
+            })}
+          </>
+        }
+      </div>
+      <div className="VillagerChanceField__chance">
+        <h4>Villager Ask Chance:</h4>
+        <div className="VillagerChanceField__chance-percentage">
+          {villagerExcludedReason ? '0.00%' : Math.min(moveOutChanceA, moveOutChanceB) + ' % - ' + Math.max(moveOutChanceA, moveOutChanceB) + '%'}
+        </div>
       </div>
     </div>
   );

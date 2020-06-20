@@ -6,6 +6,7 @@
   }
   &__friendship-summary {
     padding-left: 30px;
+    margin-bottom: 40px;
     & > div {
       margin-top: 25px;
       border-left: 8px solid $secondary-color;
@@ -17,6 +18,14 @@
           color: $primary-color;
         }
       }
+    }
+  }
+  &__villagers-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .VillagerChanceField {
+      margin: 5px;
     }
   }
 }

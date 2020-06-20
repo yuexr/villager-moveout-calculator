@@ -29,12 +29,12 @@ const VillagersChanceContainer = () => {
           <div className="text-note">*Note: this is different from when they buy your items in a conversation. At level 6, they will run up to you to buy!</div>
         </div>
       </div>
-      {
-        villagers.map((villager, villagerIndex) => (
+      <div className="VillagersChanceContainer__villagers-container">
+        {villagers.map((villager, villagerIndex) => (
           <VillagerChanceField key={villager.id} villager={villager} villagerIndex={villagerIndex}
             moveOutChanceA={moveOutChancesA[villagerIndex]} moveOutChanceB={moveOutChancesB[villagerIndex]} />
-        ))
-      }
+        ))}
+      </div>
     </div>
   )
 }

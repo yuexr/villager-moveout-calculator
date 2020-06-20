@@ -1,0 +1,46 @@
+@import '../../base';
+
+.VillagerChanceField {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 300px;
+  padding: 20px;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  &__name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  &__disabled-text {
+    font-size: 16px;
+    color: $text-heading-color;
+    margin-bottom: 20px;
+  }
+  &__chance {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: $chance-color;
+    h4 {
+      margin-bottom: 5px;
+    }
+    &-percentage {
+      font-size: 22px;
+      font-weight: 700;
+      color: $text-important-color;
+    }
+  }
+  &.disabled {
+    background-color: $disabled-background-color;
+    border-color: $disabled-color;
+  }
+  .ResidentFriendshipField {
+    margin-bottom: 10px;
+  }
+}

@@ -57,7 +57,7 @@ h1 {
 
 h2 {
   font-weight: 600;
-  color: $text-important-color;
+  color: $text-note-color;
   font-size: 32px;
   line-height: 1.5;
   margin-bottom: 15px;
@@ -75,7 +75,7 @@ h4 {
 }
 
 .text-note {
-  color: $text-important-color;
+  color: $text-note-color;
   font-style: italic;
 }
 
@@ -130,4 +130,31 @@ h4 {
 .MuiMenuItem-root {
   font-family: 'Nunito',  sans-serif !important;
   font-size: 14px !important;
+}
+
+.MuiSlider-root {
+  .MuiSlider-rail {
+    height: 5px;
+    border-radius: 5px;
+    background-color: $slider-color;
+  }
+  .MuiSlider-track {
+    height: 5px;
+    border-radius: 5px;
+    background-color: $slider-track-color;
+  }
+  .MuiSlider-thumb {
+    width: 24px;
+    height: 24px;
+    margin-top: -9px;
+    margin-left: -12px;
+    background-color: transparent;
+    transition: none !important;
+    &:hover, &:focus {
+      box-shadow: none !important;
+    }
+    svg path {
+      fill: $primary-color !important;
+    }
+  }
 }

@@ -1,0 +1,15 @@
+@import '../../base';
+
+.ResidentFriendshipField {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  &__name {
+    color: $text-heading-color;
+  }
+  &__slider {
+  }
+}

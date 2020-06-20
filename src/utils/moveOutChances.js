@@ -1,10 +1,17 @@
 import { mean, sumBy, sum } from 'lodash';
 
-export const isVillagerExcluded = (villagerIndex, exclusions) => {
-  return villagerIndex === exclusions.lastVillagerToMoveIn ||
-    villagerIndex === exclusions.lastVillagerToStay ||
-    villagerIndex === exclusions.villagerRelocating ||
-    ~exclusions.villagersWithUpcomingBirthday.indexOf(villagerIndex);
+export const getVillagerExcludedReason = (villagerIndex, exclusions) => {
+  if (villagerIndex === exclusions.lastVillagerToMoveIn) {
+    return "Recently moved in.";
+  } else if (villagerIndex === exclusions.lastVillagerToStay) {
+    return "Recently asked to move out.";
+  } else if (villagerIndex === exclusions.villagerRelocating) {
+    return "House is being relocated.";
+  } else if (~exclusions.villagersWithUpcomingBirthday.indexOf(villagerIndex)) {
+    return "Birthday in the next 7 days.";
+  } else {
+    return null
+  }
 }
 
 export const getMoveOutChances = (villagers, exclusions) => {
@@ -12,7 +19,7 @@ export const getMoveOutChances = (villagers, exclusions) => {
   const friendshipPointsUpperBounds = [255, 29, 59, 99, 149, 199, 255];
 
   const moveOutPointsHigh = villagers.map((villager, villagerIndex) => {
-    if (isVillagerExcluded(villagerIndex, exclusions)) return 0;
+    if (getVillagerExcludedReason(villagerIndex, exclusions)) return 0;
 
     const friendshipPointsLow = villager.friendshipLevels.map(friendshipLevel =>
       friendshipPointsLowerBounds[friendshipLevel]);
@@ -26,7 +33,7 @@ export const getMoveOutChances = (villagers, exclusions) => {
   });
 
   const moveOutPointsLow = villagers.map((villager, villagerIndex) => {
-    if (isVillagerExcluded(villagerIndex, exclusions)) return 0;
+    if (getVillagerExcludedReason(villagerIndex, exclusions)) return 0;
 
     const friendshipPointsHigh = villager.friendshipLevels.map(friendshipLevel =>
       friendshipPointsUpperBounds[friendshipLevel]);
