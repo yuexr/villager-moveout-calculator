@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/villager-moveout-calculator/static/css/main.a0316597.chunk.css",
-    "main.js": "/villager-moveout-calculator/static/js/main.96628328.chunk.js",
-    "main.js.map": "/villager-moveout-calculator/static/js/main.96628328.chunk.js.map",
+    "main.css": "/villager-moveout-calculator/static/css/main.110cd2ba.chunk.css",
+    "main.js": "/villager-moveout-calculator/static/js/main.5173be77.chunk.js",
+    "main.js.map": "/villager-moveout-calculator/static/js/main.5173be77.chunk.js.map",
     "runtime-main.js": "/villager-moveout-calculator/static/js/runtime-main.83923304.js",
     "runtime-main.js.map": "/villager-moveout-calculator/static/js/runtime-main.83923304.js.map",
-    "static/js/2.036ea915.chunk.js": "/villager-moveout-calculator/static/js/2.036ea915.chunk.js",
-    "static/js/2.036ea915.chunk.js.map": "/villager-moveout-calculator/static/js/2.036ea915.chunk.js.map",
+    "static/js/2.6d3691e2.chunk.js": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js",
+    "static/js/2.6d3691e2.chunk.js.map": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js.map",
     "index.html": "/villager-moveout-calculator/index.html",
-    "precache-manifest.d41f5313164b4d4ee429c85b4df45094.js": "/villager-moveout-calculator/precache-manifest.d41f5313164b4d4ee429c85b4df45094.js",
+    "precache-manifest.0d8954549b11072083a3829d29c10b34.js": "/villager-moveout-calculator/precache-manifest.0d8954549b11072083a3829d29c10b34.js",
     "service-worker.js": "/villager-moveout-calculator/service-worker.js",
-    "static/css/main.a0316597.chunk.css.map": "/villager-moveout-calculator/static/css/main.a0316597.chunk.css.map",
-    "static/js/2.036ea915.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.036ea915.chunk.js.LICENSE.txt",
+    "static/css/main.110cd2ba.chunk.css.map": "/villager-moveout-calculator/static/css/main.110cd2ba.chunk.css.map",
+    "static/js/2.6d3691e2.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js.LICENSE.txt",
     "static/media/footer.png": "/villager-moveout-calculator/static/media/footer.65bdbac4.png",
     "static/media/header.png": "/villager-moveout-calculator/static/media/header.d81268f1.png",
     "static/media/ig.png": "/villager-moveout-calculator/static/media/ig.55f6d48e.png",
@@ -19,8 +19,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.83923304.js",
-    "static/js/2.036ea915.chunk.js",
-    "static/css/main.a0316597.chunk.css",
-    "static/js/main.96628328.chunk.js"
+    "static/js/2.6d3691e2.chunk.js",
+    "static/css/main.110cd2ba.chunk.css",
+    "static/js/main.5173be77.chunk.js"
   ]
 }
