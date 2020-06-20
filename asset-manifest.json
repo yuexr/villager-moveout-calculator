@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/villager-moveout-calculator/static/css/main.42dc9b66.chunk.css",
-    "main.js": "/villager-moveout-calculator/static/js/main.2bf730ae.chunk.js",
-    "main.js.map": "/villager-moveout-calculator/static/js/main.2bf730ae.chunk.js.map",
+    "main.css": "/villager-moveout-calculator/static/css/main.4eb551b6.chunk.css",
+    "main.js": "/villager-moveout-calculator/static/js/main.a3973f88.chunk.js",
+    "main.js.map": "/villager-moveout-calculator/static/js/main.a3973f88.chunk.js.map",
     "runtime-main.js": "/villager-moveout-calculator/static/js/runtime-main.83923304.js",
     "runtime-main.js.map": "/villager-moveout-calculator/static/js/runtime-main.83923304.js.map",
     "static/js/2.b94a2dd6.chunk.js": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js",
     "static/js/2.b94a2dd6.chunk.js.map": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js.map",
     "index.html": "/villager-moveout-calculator/index.html",
-    "precache-manifest.e98cc6e3e2924bbef9537e60d546fc9e.js": "/villager-moveout-calculator/precache-manifest.e98cc6e3e2924bbef9537e60d546fc9e.js",
+    "precache-manifest.a5c01806cc777ec074cd78399618df62.js": "/villager-moveout-calculator/precache-manifest.a5c01806cc777ec074cd78399618df62.js",
     "service-worker.js": "/villager-moveout-calculator/service-worker.js",
-    "static/css/main.42dc9b66.chunk.css.map": "/villager-moveout-calculator/static/css/main.42dc9b66.chunk.css.map",
+    "static/css/main.4eb551b6.chunk.css.map": "/villager-moveout-calculator/static/css/main.4eb551b6.chunk.css.map",
     "static/js/2.b94a2dd6.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js.LICENSE.txt",
     "static/media/header.png": "/villager-moveout-calculator/static/media/header.d81268f1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.83923304.js",
     "static/js/2.b94a2dd6.chunk.js",
-    "static/css/main.42dc9b66.chunk.css",
-    "static/js/main.2bf730ae.chunk.js"
+    "static/css/main.4eb551b6.chunk.css",
+    "static/js/main.a3973f88.chunk.js"
   ]
 }
