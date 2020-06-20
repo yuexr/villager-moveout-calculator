@@ -10,7 +10,7 @@ const NumberSelector = ({ value, minValue = 1, maxValue = 99, onDecrease, onIncr
     <div className="NumberSelector">
       {value === minValue ? (
         <Tooltip title={`MINIMUM ${minValue}`} placement="top" arrow>
-          <button className="minus-button" disabled>
+          <button className="minus-button disabled">
             <Icon path={mdiMinus} size="18px" />
           </button>
         </Tooltip>
@@ -22,7 +22,7 @@ const NumberSelector = ({ value, minValue = 1, maxValue = 99, onDecrease, onIncr
       <div className="NumberSelector__value">{value}</div>
       {value === maxValue ? (
         <Tooltip title={`MAXIMUM ${maxValue}`} placement="top" arrow>
-          <button className="plus-button" disabled>
+          <button className="plus-button disabled">
             <Icon path={mdiPlus} size="18px" />
           </button>
         </Tooltip>
