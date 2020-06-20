@@ -1,0 +1,10 @@
+@import '../../base';
+
+.IslandersContainer {
+  margin-bottom: 30px;
+  @media (min-width: 960px) {
+    .ResidentsInputContainer {
+      margin-right: 30px
+    }
+  }
+}

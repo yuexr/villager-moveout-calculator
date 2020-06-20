@@ -1,11 +1,13 @@
 import React, { useContext } from "react";
 import { v4 as uuidv4 } from "uuid";
 
+import './ResidentsInputContainer.scss';
 import { ResidentsContext } from "../../context/Residents";
 import { VillagersContext } from "../../context/Villagers";
 import ResidentNameField from "../ResidentNameField/ResidentNameField";
+import NumberSelector from "../NumberSelector/NumberSelector";
 
-const ResidentsContainer = () => {
+const ResidentsInputContainer = () => {
   const { residents, setResidents } = useContext(ResidentsContext);
   const { villagers, setVillagers } = useContext(VillagersContext);
 
@@ -42,19 +44,20 @@ const ResidentsContainer = () => {
   }
 
   return (
-    <div className="ResidentsContainer">
-      <h2>Residents</h2>
-      {residents.map((resident, i) => (
-        <ResidentNameField key={resident.id} name={resident.name} index={i} onChange={(e) => renameResident(i, e.target.value)} />
-      ))}
-      {residents.length < 8 && (
-        <button onClick={addNewResident}>+ ADD MORE</button>
-      )}
-      {residents.length > 1 && (
-        <button onClick={removeLastResident}>- REMOVE</button>
-      )}
+    <div className="ResidentsInputContainer">
+      <h3>RESIDENTS</h3>
+      <h4>How many residents (switch players) live on your island?</h4>
+      <div className="text-note">Villager move-out chance considers friendship with ALL players.</div>
+      <NumberSelector value={residents.length} minValue={1} maxValue={8}
+        onDecrease={removeLastResident} onIncrease={addNewResident} />
+      <h4>Enter your residents' names below:</h4>
+      <div className="ResidentsInputContainer__fields">
+        {residents.map((resident, i) => (
+          <ResidentNameField key={resident.id} name={resident.name} index={i} onChange={(e) => renameResident(i, e.target.value)} />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default ResidentsContainer;
+export default ResidentsInputContainer;

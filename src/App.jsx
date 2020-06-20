@@ -2,14 +2,13 @@ import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 import './App.scss';
-import lily from './img/lily.png';
 import { ResidentsContext } from './context/Residents'
 import { VillagersContext } from './context/Villagers'
 import { ExclusionsContext } from './context/Exclusions'
-import ResidentsContainer from './components/ResidentsContainer/ResidentsContainer';
-import VillagersInputContainer from './components/VillagersInputContainer/VillagersInputContainer';
 import VillagersChanceContainer from './components/VillagersChanceContainer/VillagersChanceContainer';
 import VillagerExclusionsContainer from './components/VillagerExclusionsContainer/VillagerExclusionsContainer';
+import Header from './components/Header/Header';
+import IslandersContainer from './components/IslandersContainer/IslandersContainer';
 
 const App = () => {
   const [residents, setResidents] = useState([{
@@ -62,12 +61,13 @@ const App = () => {
       <VillagersContext.Provider value={{ villagers, setVillagers }}>
         <ExclusionsContext.Provider value={{ exclusions, setExclusions }}>
           <div className="App">
-            <h1>coming soon binch</h1>
-            <img src={lily} alt="Lily"></img>
-            <ResidentsContainer />
-            <VillagersInputContainer />
-            <VillagerExclusionsContainer />
-            <VillagersChanceContainer />
+            <Header />
+            <div className="App__content">
+              <h1>Move-Out Calculator</h1>
+              <IslandersContainer />
+              <VillagerExclusionsContainer />
+              <VillagersChanceContainer />
+            </div>
           </div>
         </ExclusionsContext.Provider>
       </VillagersContext.Provider>

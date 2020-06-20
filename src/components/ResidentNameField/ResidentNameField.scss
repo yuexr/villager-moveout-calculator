@@ -1,0 +1,8 @@
+.ResidentNameField {
+  display: flex;
+  align-items: center;
+  &__name {
+    margin-right: 40px;
+    font-weight: 700;
+  }
+}

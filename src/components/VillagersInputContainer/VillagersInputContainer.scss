@@ -1,0 +1,16 @@
+.VillagersInputContainer {
+  max-width: 450px;
+  padding: 15px 20px;
+  h3 {
+    margin-bottom: 10px;
+  }
+  &__fields {
+    margin-top: 15px;
+    .VillagerNameField:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+    .MuiTextField-root {
+      flex-grow: 1;
+    }
+  }
+}

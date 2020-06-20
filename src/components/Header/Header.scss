@@ -1,0 +1,12 @@
+@import '../../base';
+
+.Header {
+  &__image {
+    display: block;
+    max-width: 100%;
+  }
+  &__navbar {
+    height: 30px;
+    background-color: $navbar-color;
+  }
+}

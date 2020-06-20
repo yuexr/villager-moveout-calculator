@@ -1,0 +1,21 @@
+@import '../../base';
+
+.NumberSelector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 0;
+
+  &__value {
+    height: 40px;
+    width: 60px;
+    padding: 0 15px;
+    font-size: 24px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    border: 1px solid $primary-color;
+    border-radius: 4px;
+    margin: 0 15px;
+  }
+}

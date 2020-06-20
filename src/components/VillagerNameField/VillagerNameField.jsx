@@ -1,13 +1,14 @@
 import React from 'react';
 
-const VillagerNameField = ({ name, index, onChange }) => (
-  <div>
-    {`Villager ${index + 1} `}
-    <input
-      type="text"
-      value={name}
-      onChange={onChange}
-    />
+import './VillagerNameField.scss';
+import TextField from '../TextField/TextField';
+
+const VillagerNameField = ({ name, villagerIndex, onChange }) => (
+  <div className="VillagerNameField">
+    <div className="VillagerNameField__name">
+      {`VILLAGER #${villagerIndex + 1} `}
+    </div>
+    <TextField variant="outlined" size="small" value={name} onChange={onChange} />
   </div>
 );
 
