@@ -7,8 +7,9 @@ import { VillagersContext } from './context/Villagers'
 import { ExclusionsContext } from './context/Exclusions'
 import VillagersChanceContainer from './components/VillagersChanceContainer/VillagersChanceContainer';
 import VillagerExclusionsContainer from './components/VillagerExclusionsContainer/VillagerExclusionsContainer';
-import Header from './components/Header/Header';
 import IslandersContainer from './components/IslandersContainer/IslandersContainer';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   const [residents, setResidents] = useState([{
@@ -68,6 +69,7 @@ const App = () => {
               <VillagerExclusionsContainer />
               <VillagersChanceContainer />
             </div>
+            <Footer />
           </div>
         </ExclusionsContext.Provider>
       </VillagersContext.Provider>
