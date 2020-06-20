@@ -102,3 +102,32 @@ h4 {
 .plus-button {
   background-color: $primary-color;
 }
+
+.MuiOutlinedInput {
+  &-root {
+    fieldset {
+      border-color: $disabled-color !important;
+    }
+    &:hover, &.Mui-focused {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: $primary-color !important;
+      }
+      .MuiSvgIcon-root {
+        color: $primary-color !important;
+      }
+    }
+  }
+  &-input {
+    height: 40px !important;
+    box-sizing: border-box !important;
+    padding-top: 10.5px !important;
+    padding-bottom: 10.5px !important;
+    font-family: 'Nunito',  sans-serif !important;
+    font-size: 14px !important;
+  }
+}
+
+.MuiMenuItem-root {
+  font-family: 'Nunito',  sans-serif !important;
+  font-size: 14px !important;
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './VillagerNameField.scss';
-import TextField from '../TextField/TextField';
+import TextField from '@material-ui/core/TextField';
 
 const VillagerNameField = ({ name, villagerIndex, onChange }) => (
   <div className="VillagerNameField">

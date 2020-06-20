@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './ResidentNameField.scss';
-import TextField from '../TextField/TextField';
+import TextField from '@material-ui/core/TextField';
 
 const ResidentNameField = ({ name, index, onChange }) => (
   <div className="ResidentNameField">

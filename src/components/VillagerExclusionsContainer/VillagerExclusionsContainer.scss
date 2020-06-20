@@ -1,0 +1,35 @@
+@import '../../base';
+
+.VillagerExclusionsContainer {
+  margin-bottom: 30px;
+  h4 {
+    margin-bottom: 25px;
+  }
+  &__field-label {
+    font-size: 16px;
+    color: $text-heading-color;
+    margin-bottom: 10px;
+  }
+  .MuiInputBase-root {
+    margin-bottom: 25px;
+    width: 300px;
+  }
+  &__birthday-fields {
+    display: flex;
+    flex-direction: column;
+    .MuiInputBase-root {
+      margin-bottom: 10px;
+    }
+  }
+  &__birthday-button {
+    display: inline-flex;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-right: 20px;
+      margin-bottom: 10px;
+    }
+    button {
+      margin-right: 10px;
+    }
+  }
+}

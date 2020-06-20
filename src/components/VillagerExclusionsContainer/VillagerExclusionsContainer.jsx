@@ -1,5 +1,9 @@
 import React, { useContext } from 'react';
+import Icon from '@mdi/react';
+import { Select, MenuItem } from '@material-ui/core';
+import { mdiMinus, mdiPlus } from '@mdi/js';
 
+import './VillagerExclusionsContainer.scss';
 import { VillagersContext } from '../../context/Villagers';
 import { ExclusionsContext } from '../../context/Exclusions';
 
@@ -51,52 +55,70 @@ const VillagerExclusionsContainer = () => {
   }
 
   return (
-    <div>
-      <h2>Add Exclusions</h2>
-      <div>Last to move in:&nbsp;
-        <select value={lastVillagerToMoveIn === "" ? "" : lastVillagerToMoveIn.toString()}
-          onChange={(e) => updateExclusion(e, "lastVillagerToMoveIn")}>
-          <option value="">n/a</option>
-          {villagers.map((villager, villagerIndex) => (
-            <option key={villager.id} value={villagerIndex.toString()}>{villager.name}</option>
-          ))}
-        </select>
-      </div>
-      <div>Last to ask to move out:&nbsp;
-        <select value={lastVillagerToStay === "" ? "" : lastVillagerToStay.toString()}
-          onChange={(e) => updateExclusion(e, "lastVillagerToStay")}>
-          <option value="">n/a</option>
-          {villagers.map((villager, villagerIndex) => (
-            <option key={villager.id} value={villagerIndex.toString()}>{villager.name}</option>
-          ))}
-        </select>
-      </div>
-      <div>Villager currently relocating house:&nbsp;
-        <select value={villagerRelocating === "" ? "" : villagerRelocating.toString()}
-          onChange={(e) => updateExclusion(e, "villagerRelocating")}>
-          <option value="">n/a</option>
-          {villagers.map((villager, villagerIndex) => (
-            <option key={villager.id} value={villagerIndex.toString()}>{villager.name}</option>
-          ))}
-        </select>
-      </div>
-      <div>Villagers whose birthday is in the next 7 days:&nbsp;
-        {villagersWithUpcomingBirthday.map((villagerWithBirthday, villagerWithBirthdayIndex) => (
-          <div><select value={villagerWithBirthday === "" ? "" : villagerWithBirthday.toString()}
-            onChange={(e) => updateVillagerWithUpcomingBirthday(e, villagerWithBirthdayIndex)}>
-            <option value="">n/a</option>
-            {villagers.map((villager, villagerIndex) => (
-              <option key={villager.id} value={villagerIndex.toString()}>{villager.name}</option>
-            ))}
-          </select></div>
+    <div className="VillagerExclusionsContainer">
+      <h2>Step 2: add exclusions</h2>
+      <h4>Villagers who meet these conditions cannot ask to move out, and will be excluded from the calculation.</h4>
+
+      <div className="VillagerExclusionsContainer__field-label">
+        A. Last villager to move into your island (newest villager):</div>
+      <Select variant="outlined" displayEmpty value={lastVillagerToMoveIn === "" ? "" : lastVillagerToMoveIn.toString()}
+        onChange={(e) => updateExclusion(e, "lastVillagerToMoveIn")}>
+        <MenuItem value="">UNKNOWN OR NOT APPLICABLE</MenuItem>
+        {villagers.map((villager, villagerIndex) => (
+          <MenuItem key={villager.id} value={villagerIndex.toString()}>{villager.name}</MenuItem>
         ))}
-        {villagersWithUpcomingBirthday.length < villagers.length && (
-          <button onClick={addNewVillagerWithUpcomingBirthday}>+ ADD MORE</button>
-        )}
-        {villagersWithUpcomingBirthday.length > 1 && (
-          <button onClick={removeVillagerWithUpcomingBirthday}>- REMOVE</button>
-        )}
+      </Select>
+
+      <div className="VillagerExclusionsContainer__field-label">
+        B. Most recent villager to ask you to move, and you told them to stay:</div>
+      <Select variant="outlined" displayEmpty value={lastVillagerToStay === "" ? "" : lastVillagerToStay.toString()}
+        onChange={(e) => updateExclusion(e, "lastVillagerToStay")}>
+        <MenuItem value="">UNKNOWN OR NOT APPLICABLE</MenuItem>
+        {villagers.map((villager, villagerIndex) => (
+          <MenuItem key={villager.id} value={villagerIndex.toString()}>{villager.name}</MenuItem>
+        ))}
+      </Select>
+
+      <div className="VillagerExclusionsContainer__field-label">
+        C. Villager is currently in the process of relocating their house (including if their moving kit is in your pocket):</div>
+      <Select variant="outlined" displayEmpty value={villagerRelocating === "" ? "" : villagerRelocating.toString()}
+        onChange={(e) => updateExclusion(e, "villagerRelocating")}>
+        <MenuItem value="">UNKNOWN OR NOT APPLICABLE</MenuItem>
+        {villagers.map((villager, villagerIndex) => (
+          <MenuItem key={villager.id} value={villagerIndex.toString()}>{villager.name}</MenuItem>
+        ))}
+      </Select>
+
+      <div className="VillagerExclusionsContainer__field-label">D. Villagers whose birthday is in the next 7 days:
+          <div className="text-note">Their up-coming birthday will be mentioned on the bulletin board 7 days prior.</div>
       </div>
+      <div className="VillagerExclusionsContainer__birthday-fields">
+        {villagersWithUpcomingBirthday.map((villagerWithBirthday, villagerWithBirthdayIndex) => (
+          <Select variant="outlined" displayEmpty value={villagerWithBirthday === "" ? "" : villagerWithBirthday.toString()}
+            onChange={(e) => updateVillagerWithUpcomingBirthday(e, villagerWithBirthdayIndex)}>
+            <MenuItem value="">UNKNOWN OR NOT APPLICABLE</MenuItem>
+            {villagers.map((villager, villagerIndex) => (
+              <MenuItem key={villager.id} value={villagerIndex.toString()}>{villager.name}</MenuItem>
+            ))}
+          </Select>
+        ))}
+      </div>
+      {villagersWithUpcomingBirthday.length < villagers.length && (
+        <div className="VillagerExclusionsContainer__birthday-button">
+          <button className="plus-button" onClick={addNewVillagerWithUpcomingBirthday}>
+            <Icon path={mdiPlus} size="18px" />
+          </button>
+          ADD ANOTHER VILLAGER
+        </div>
+      )}
+      {villagersWithUpcomingBirthday.length > 1 && (
+        <div className="VillagerExclusionsContainer__birthday-button">
+          <button className="minus-button" onClick={removeVillagerWithUpcomingBirthday}>
+            <Icon path={mdiMinus} size="18px" />
+          </button>
+          REMOVE A VILLAGER
+        </div>
+      )}
     </div>
   );
 }
