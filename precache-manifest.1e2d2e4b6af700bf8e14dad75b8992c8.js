@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d5eedfd0f2a3f042b0972d8ca96eaca6",
+    "revision": "025dc1921d25e74e6773ef19effed61c",
     "url": "/villager-moveout-calculator/index.html"
   },
   {
-    "revision": "6793c49c994a77738aa9",
-    "url": "/villager-moveout-calculator/static/css/main.4eb551b6.chunk.css"
+    "revision": "3890d051f9f60105c52b",
+    "url": "/villager-moveout-calculator/static/css/main.5f9825f1.chunk.css"
   },
   {
     "revision": "d63e2a7e9740c304266f",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6793c49c994a77738aa9",
+    "revision": "3890d051f9f60105c52b",
     "url": "/villager-moveout-calculator/static/js/main.a3973f88.chunk.js"
   },
   {

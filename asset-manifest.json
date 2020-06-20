@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/villager-moveout-calculator/static/css/main.4eb551b6.chunk.css",
+    "main.css": "/villager-moveout-calculator/static/css/main.5f9825f1.chunk.css",
     "main.js": "/villager-moveout-calculator/static/js/main.a3973f88.chunk.js",
     "main.js.map": "/villager-moveout-calculator/static/js/main.a3973f88.chunk.js.map",
     "runtime-main.js": "/villager-moveout-calculator/static/js/runtime-main.83923304.js",
@@ -8,16 +8,16 @@
     "static/js/2.b94a2dd6.chunk.js": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js",
     "static/js/2.b94a2dd6.chunk.js.map": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js.map",
     "index.html": "/villager-moveout-calculator/index.html",
-    "precache-manifest.a5c01806cc777ec074cd78399618df62.js": "/villager-moveout-calculator/precache-manifest.a5c01806cc777ec074cd78399618df62.js",
+    "precache-manifest.1e2d2e4b6af700bf8e14dad75b8992c8.js": "/villager-moveout-calculator/precache-manifest.1e2d2e4b6af700bf8e14dad75b8992c8.js",
     "service-worker.js": "/villager-moveout-calculator/service-worker.js",
-    "static/css/main.4eb551b6.chunk.css.map": "/villager-moveout-calculator/static/css/main.4eb551b6.chunk.css.map",
+    "static/css/main.5f9825f1.chunk.css.map": "/villager-moveout-calculator/static/css/main.5f9825f1.chunk.css.map",
     "static/js/2.b94a2dd6.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.b94a2dd6.chunk.js.LICENSE.txt",
     "static/media/header.png": "/villager-moveout-calculator/static/media/header.d81268f1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.83923304.js",
     "static/js/2.b94a2dd6.chunk.js",
-    "static/css/main.4eb551b6.chunk.css",
+    "static/css/main.5f9825f1.chunk.css",
     "static/js/main.a3973f88.chunk.js"
   ]
 }
