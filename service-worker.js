@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/villager-moveout-calculator/precache-manifest.1e2d2e4b6af700bf8e14dad75b8992c8.js"
+  "/villager-moveout-calculator/precache-manifest.b4f8859fbcf714df4d25e822eb00b821.js"
 );
 
 self.addEventListener('message', (event) => {
