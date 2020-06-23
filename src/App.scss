@@ -150,17 +150,20 @@ hr {
     background-color: $slider-track-color;
   }
   .MuiSlider-thumb {
-    width: 24px;
-    height: 24px;
     margin-top: -9px;
     margin-left: -12px;
     background-color: transparent;
-    transition: none !important;
-    &:hover, &:focus {
-      box-shadow: none !important;
+    &.MuiSlider-active {
+      box-shadow: none;
     }
-    svg path {
+    path {
       fill: $primary-color !important;
     }
+  }
+  .MuiSlider-mark {
+    display: none;
+  }
+  .MuiSlider-markLabel {
+    top: 35px;
   }
 }
