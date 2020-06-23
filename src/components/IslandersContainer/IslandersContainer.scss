@@ -1,7 +1,9 @@
 @import '../../base';
 
 .IslandersContainer {
-  margin-bottom: 40px;
+  .VillagersInputContainer, .ResidentsInputContainer {
+    margin-bottom: 40px;
+  }
   @media (min-width: 960px) {
     .VillagersInputContainer {
       margin-right: 30px

@@ -17,8 +17,13 @@
   &__birthday-fields {
     display: flex;
     flex-direction: column;
-    .MuiInputBase-root {
+    & > div {
+      display: flex;
       margin-bottom: 10px;
+      .MuiInputBase-root {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
     }
   }
   &__birthday-button {

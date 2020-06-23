@@ -66,7 +66,9 @@ const App = () => {
             <div className="App__content">
               <h1>Move-Out Calculator</h1>
               <IslandersContainer />
+              <hr/>
               <VillagerExclusionsContainer />
+              <hr/>
               <VillagersChanceContainer />
             </div>
             <Footer />

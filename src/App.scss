@@ -25,6 +25,7 @@ time, mark, audio, video {
 	font: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
+  color: $body-text-color;
 }
 
 body {
@@ -74,8 +75,13 @@ h4 {
   font-size: 16px;
 }
 
+hr {
+  margin-bottom: 40px;
+}
+
 .text-note {
   color: $text-note-color;
+  font-size: 14px;
   font-style: italic;
 }
 
