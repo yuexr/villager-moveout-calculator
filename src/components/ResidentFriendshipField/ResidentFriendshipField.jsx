@@ -1,15 +1,9 @@
 import React from 'react';
 import { Slider } from '@material-ui/core';
-import Icon from '@mdi/react';
-import { mdiHeart } from '@mdi/js';
 
 import './ResidentFriendshipField.scss';
 
 const ResidentFriendshipField = ({ residentName, friendshipLevel, onChange }) => {
-  const getThumbComponent = (props) => (
-    <Icon {...props} path={mdiHeart} size="24px" />
-  )
-
   const marks = [
     { value: 0, label: "?" },
     { value: 1, label: "1" },
@@ -27,9 +21,7 @@ const ResidentFriendshipField = ({ residentName, friendshipLevel, onChange }) =>
         <span>LEVEL: {friendshipLevel || "?"}</span>
       </div>
       <div className="ResidentFriendshipField__slider">
-        <Slider min={0} max={6} value={friendshipLevel} onChange={onChange}
-          marks={marks}
-          ThumbComponent={getThumbComponent} />
+        <Slider min={0} max={6} value={friendshipLevel} onChange={onChange} marks={marks} />
       </div>
     </div>
   );

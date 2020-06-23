@@ -97,7 +97,7 @@ const VillagerExclusionsContainer = () => {
       </div>
       <div className="VillagerExclusionsContainer__birthday-fields">
         {villagersWithUpcomingBirthday.map((villagerWithBirthday, villagerWithBirthdayIndex) => (
-          <div>
+          <div key={villagerWithBirthday}>
             <Select variant="outlined" displayEmpty value={villagerWithBirthday === "" ? "" : villagerWithBirthday.toString()}
               onChange={(e) => updateVillagerWithUpcomingBirthday(e, villagerWithBirthdayIndex)}>
               <MenuItem value="">Unknown or not available</MenuItem>

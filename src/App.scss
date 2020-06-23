@@ -150,14 +150,31 @@ hr {
     background-color: $slider-track-color;
   }
   .MuiSlider-thumb {
-    margin-top: -9px;
-    margin-left: -12px;
-    background-color: transparent;
-    &.MuiSlider-active {
+    margin-top: -3px;
+    height: 12px;
+    width: 12px;
+    border-radius: 0;
+    &:hover, &.MuiSlider-active {
       box-shadow: none;
     }
-    path {
-      fill: $primary-color !important;
+    background-color: $primary-color;
+    transform: rotate(-45deg);
+    &::before,
+    &::after {
+      content: "";
+      background-color: $primary-color;
+      border-radius: 50%;
+      height: 12px;
+      position: absolute;
+      width: 12px;
+    }
+    &::before {
+      top: -6px;
+      left: 0;
+    }
+    &::after {
+      left: 6px;
+      top: 0;
     }
   }
   .MuiSlider-mark {
