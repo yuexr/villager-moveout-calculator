@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/villager-moveout-calculator/static/css/main.4c582de0.chunk.css",
-    "main.js": "/villager-moveout-calculator/static/js/main.84505db9.chunk.js",
-    "main.js.map": "/villager-moveout-calculator/static/js/main.84505db9.chunk.js.map",
+    "main.css": "/villager-moveout-calculator/static/css/main.6efe731b.chunk.css",
+    "main.js": "/villager-moveout-calculator/static/js/main.d3fdfb48.chunk.js",
+    "main.js.map": "/villager-moveout-calculator/static/js/main.d3fdfb48.chunk.js.map",
     "runtime-main.js": "/villager-moveout-calculator/static/js/runtime-main.83923304.js",
     "runtime-main.js.map": "/villager-moveout-calculator/static/js/runtime-main.83923304.js.map",
     "static/js/2.6d3691e2.chunk.js": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js",
     "static/js/2.6d3691e2.chunk.js.map": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js.map",
     "index.html": "/villager-moveout-calculator/index.html",
-    "precache-manifest.aa778db6e1e2184742af05a391c0dcfa.js": "/villager-moveout-calculator/precache-manifest.aa778db6e1e2184742af05a391c0dcfa.js",
+    "precache-manifest.2b8f5a7e0454c25312ffa0c5c4001c3e.js": "/villager-moveout-calculator/precache-manifest.2b8f5a7e0454c25312ffa0c5c4001c3e.js",
     "service-worker.js": "/villager-moveout-calculator/service-worker.js",
-    "static/css/main.4c582de0.chunk.css.map": "/villager-moveout-calculator/static/css/main.4c582de0.chunk.css.map",
+    "static/css/main.6efe731b.chunk.css.map": "/villager-moveout-calculator/static/css/main.6efe731b.chunk.css.map",
     "static/js/2.6d3691e2.chunk.js.LICENSE.txt": "/villager-moveout-calculator/static/js/2.6d3691e2.chunk.js.LICENSE.txt",
     "static/media/footer.png": "/villager-moveout-calculator/static/media/footer.65bdbac4.png",
     "static/media/header.png": "/villager-moveout-calculator/static/media/header.d81268f1.png",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.83923304.js",
     "static/js/2.6d3691e2.chunk.js",
-    "static/css/main.4c582de0.chunk.css",
-    "static/js/main.84505db9.chunk.js"
+    "static/css/main.6efe731b.chunk.css",
+    "static/js/main.d3fdfb48.chunk.js"
   ]
 }
